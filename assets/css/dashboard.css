@@ -1,0 +1,40 @@
+.emotion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.emotion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+    background: var(--bg-card-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.emotion-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.emotion-content strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.emotion-content p {
+    margin: 0 0 4px;
+    color: var(--text-muted);
+}
+
+.emotion-content small {
+    color: var(--text-light);
+}

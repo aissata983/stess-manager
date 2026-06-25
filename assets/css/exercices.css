@@ -1,0 +1,130 @@
+.exercise-card {
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.exercise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.exercise-card-top {
+    height: 120px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.exercise-card-body {
+    padding: 22px;
+}
+
+.exercise-card-body h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.exercise-card-body p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.exercise-meta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.exercise-session {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.breathing-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breathing-app {
+    width: 100%;
+    text-align: center;
+}
+
+.breathing-circle {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.25);
+    transform: scale(1);
+    transition: transform 4s ease-in-out, box-shadow 0.4s ease;
+}
+
+.breathing-circle.inhale {
+    transform: scale(1.25);
+}
+
+.breathing-circle.exhale {
+    transform: scale(0.85);
+}
+
+.breathing-circle.hold {
+    transform: scale(1.1);
+}
+
+.breathing-timer {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.breathing-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@keyframes pulseSoft {
+    0% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.35);
+    }
+    70% {
+        box-shadow: 0 0 0 24px rgba(79, 70, 229, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+    }
+}
+
+.breathing-circle.active {
+    animation: pulseSoft 3s infinite;
+}
+
+@media (max-width: 900px) {
+    .exercise-session {
+        grid-template-columns: 1fr;
+    }
+
+    .breathing-circle {
+        width: 180px;
+        height: 180px;
+    }
+}

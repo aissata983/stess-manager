@@ -1,0 +1,21 @@
+.filter-form {
+    display: flex;
+    align-items: end;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.conseil-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.form-card {
+    max-width: 760px;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 100%;
+    min-height: 320px;
+}
