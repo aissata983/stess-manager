@@ -29,7 +29,7 @@ function validateCsrf(): void
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!verifyCsrfToken()) {
-            setFlash('error', 'Session expiree. Veuillez reessayer.');
+            setFlash('error', 'Session expirée. Veuillez réessayer.');
             redirectBack();
         }
     }
