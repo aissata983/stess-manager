@@ -128,11 +128,11 @@ function getMoodIcon(string $mood): string
 function getMoodLabel(string $mood): string
 {
     $labels = [
-        'tres_heureux' => 'Tres heureux',
+        'tres_heureux' => 'Très heureux',
         'heureux' => 'Heureux',
         'neutre' => 'Neutre',
-        'stresse' => 'Stresse',
-        'tres_stresse' => 'Tres stresse'
+        'stresse' => 'Stressé',
+        'tres_stresse' => 'Très stressé'
     ];
 
     return $labels[$mood] ?? 'Inconnu';
