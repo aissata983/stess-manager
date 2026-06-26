@@ -62,7 +62,7 @@ class EmotionController
         if ($niveauStress !== null && $niveauStress !== '') {
             $niveauStress = (int) $niveauStress;
             if ($niveauStress < 1 || $niveauStress > 10) {
-                setFlash('error', 'Le niveau de stress doit etre compris entre 1 et 10.');
+                setFlash('error', 'Le niveau de stress doit être compris entre 1 et 10.');
                 redirect('/emotions/create');
             }
         } else {
@@ -74,11 +74,11 @@ class EmotionController
         $created = $this->emotionModel->create(getUserId(), $humeur, $commentaire, $niveauStress);
 
         if (!$created) {
-            setFlash('error', 'Impossible d\'enregistrer votre emotion.');
+            setFlash('error', 'Impossible d\'enregistrer votre émotion.');
             redirect('/emotions/create');
         }
 
-        setFlash('success', 'Emotion enregistree avec succes.');
+        setFlash('success', 'Emotion enregistrée avec succès.');
         redirect('/emotions');
     }
 
@@ -93,7 +93,7 @@ class EmotionController
         $emotions = $this->emotionModel->getByUser($userId, 100);
 
         view('emotions.history', [
-            'pageTitle' => 'Historique des emotions',
+            'pageTitle' => 'Historique des émotions',
             'emotions' => $emotions
         ]);
     }
