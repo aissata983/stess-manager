@@ -1,40 +1,294 @@
-.emotion-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.emotion-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 14px;
-    border-radius: 16px;
-    background: var(--bg-card-secondary);
-    border: 1px solid var(--border-color);
-}
-
-.emotion-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
+.stats-grid {
     display: grid;
-    place-items: center;
-    font-size: 1.4rem;
-    color: #fff;
-    flex-shrink: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
 }
 
-.emotion-content strong {
-    display: block;
+.modern-stat-card {
+    position: relative;
+    min-height: 182px;
+    border-radius: 28px;
+    padding: 22px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-sm);
+    background: #fff;
+}
+
+.modern-stat-card h3 {
+    margin: 0 0 14px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 800;
+}
+
+.modern-stat-card .value {
+    font-size: 2.1rem;
+    font-weight: 800;
     margin-bottom: 6px;
 }
 
-.emotion-content p {
+.modern-stat-card .sub {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+}
+
+.modern-stat-icon {
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.4rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.stat-purple {
+    background: linear-gradient(180deg, #f8f4ff 0%, #f6f7ff 100%);
+    border-color: #e8ddff;
+}
+
+.stat-purple h3 {
+    color: #5b4fff;
+}
+
+.stat-purple .modern-stat-icon {
+    background: linear-gradient(135deg, #7d67ff 0%, #5c5cff 100%);
+}
+
+.stat-green {
+    background: linear-gradient(180deg, #f1fff8 0%, #f8fffc 100%);
+    border-color: #d8f5e8;
+}
+
+.stat-green h3 {
+    color: #16a56d;
+}
+
+.stat-green .modern-stat-icon {
+    background: linear-gradient(135deg, #4bd38e 0%, #34c48a 100%);
+}
+
+.stat-blue {
+    background: linear-gradient(180deg, #f4f8ff 0%, #fbfdff 100%);
+    border-color: #dce8ff;
+}
+
+.stat-blue h3 {
+    color: #3d73ff;
+}
+
+.stat-blue .modern-stat-icon {
+    background: linear-gradient(135deg, #6aa8ff 0%, #4e80ff 100%);
+}
+
+.stat-orange {
+    background: linear-gradient(180deg, #fff7f0 0%, #fffdfb 100%);
+    border-color: #ffe2cc;
+}
+
+.stat-orange h3 {
+    color: #ff8d42;
+}
+
+.stat-orange .modern-stat-icon {
+    background: linear-gradient(135deg, #ffb14d 0%, #ff8a4f 100%);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.panel-card {
+    border-radius: 28px;
+    padding: 14px;
+}
+
+.panel-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 6px 14px;
+}
+
+.panel-card-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.emotion-history-card {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.emotion-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #ffcf4d 0%, #ff9f1a 100%);
+    color: #fff;
+}
+
+.emotion-text strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.emotion-text p {
     margin: 0 0 4px;
     color: var(--text-muted);
 }
 
-.emotion-content small {
+.emotion-text small {
     color: var(--text-light);
+}
+
+.emotion-empty-illustration {
+    text-align: center;
+    padding: 18px 12px 6px;
+}
+
+.emotion-empty-illustration .circle-art {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    background: radial-gradient(circle at center, #efeaff 0%, #f8f6ff 70%);
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    color: #8d78ff;
+}
+
+.emotion-empty-illustration h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.emotion-empty-illustration p {
+    margin: 0 auto 16px;
+    max-width: 320px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.recommendations {
+    margin-top: 10px;
+}
+
+.recommendations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.recommendations-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.recommendation-card {
+    border-radius: 24px;
+    padding: 22px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.recommendation-card.blue {
+    background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
+}
+
+.recommendation-card.green {
+    background: linear-gradient(180deg, #effff6 0%, #ffffff 100%);
+}
+
+.recommendation-card.orange {
+    background: linear-gradient(180deg, #fff5ef 0%, #ffffff 100%);
+}
+
+.recommendation-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.recommendation-card.blue .recommendation-icon {
+    background: linear-gradient(135deg, #6aa8ff 0%, #4f80ff 100%);
+}
+
+.recommendation-card.green .recommendation-icon {
+    background: linear-gradient(135deg, #4fd890 0%, #34c88a 100%);
+}
+
+.recommendation-card.orange .recommendation-icon {
+    background: linear-gradient(135deg, #ffb45c 0%, #ff8752 100%);
+}
+
+.recommendation-content h3 {
+    margin: 0 0 6px;
+    font-size: 1.08rem;
+}
+
+.recommendation-content p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+@media (max-width: 1280px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 980px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
