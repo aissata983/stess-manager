@@ -24,7 +24,7 @@ class MeditationController
         $meditations = $this->meditationModel->getAllActive();
 
         view('meditation.index', [
-            'pageTitle' => 'Meditation guidee',
+            'pageTitle' => 'Méditation guidée',
             'meditations' => $meditations
         ]);
     }
@@ -64,7 +64,7 @@ class MeditationController
         $meditation = $this->meditationModel->findById($meditationId);
 
         if (!$meditation) {
-            setFlash('error', 'Meditation introuvable.');
+            setFlash('error', 'Méditation introuvable.');
             redirect('/meditation');
         }
 
