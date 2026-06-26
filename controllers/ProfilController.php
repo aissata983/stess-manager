@@ -40,7 +40,7 @@ class ProfilController
         $email = trim($_POST['email'] ?? '');
 
         if (mb_strlen($nom) < 2) {
-            setFlash('error', 'Le nom doit contenir au moins 2 caracteres.');
+            setFlash('error', 'Le nom doit contenir au moins 2 caractères.');
             redirect('/profil');
         }
 
@@ -50,21 +50,21 @@ class ProfilController
         }
 
         if ($this->userModel->emailExists($email, $id)) {
-            setFlash('error', 'Cette adresse email est deja utilisee.');
+            setFlash('error', 'Cette adresse email est déja utilisée.');
             redirect('/profil');
         }
 
         $updated = $this->userModel->updateProfile($id, $nom, $email);
 
         if (!$updated) {
-            setFlash('error', 'Impossible de mettre a jour le profil.');
+            setFlash('error', 'Impossible de mettre à jour le profil.');
             redirect('/profil');
         }
 
         $_SESSION['user_nom'] = $nom;
         $_SESSION['user_email'] = $email;
 
-        setFlash('success', 'Profil mis a jour avec succes.');
+        setFlash('success', 'Profil mis à jour avec succès.');
         redirect('/profil');
     }
 
@@ -89,7 +89,7 @@ class ProfilController
         }
 
         if (strlen($newPassword) < PASSWORD_MIN_LENGTH) {
-            setFlash('error', 'Le nouveau mot de passe doit contenir au moins ' . PASSWORD_MIN_LENGTH . ' caracteres.');
+            setFlash('error', 'Le nouveau mot de passe doit contenir au moins ' . PASSWORD_MIN_LENGTH . ' caractères.');
             redirect('/profil');
         }
 
@@ -105,7 +105,7 @@ class ProfilController
             redirect('/profil');
         }
 
-        setFlash('success', 'Mot de passe modifie avec succes.');
+        setFlash('success', 'Mot de passe modifié avec succès.');
         redirect('/profil');
     }
 }
