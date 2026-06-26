@@ -3,7 +3,7 @@ define('DEBUG_MODE', true);
 
 define('APP_NAME', 'Stress Manager');
 define('APP_VERSION', '1.0.0');
-define('APP_URL', '[localhost](http://localhost:8080/stress-manager)');
+define('APP_URL', 'http://localhost:8080/stress-manager');
 
 define('ROOT_PATH', dirname(__DIR__) . '/');
 define('CONFIG_PATH', ROOT_PATH . 'config/');
