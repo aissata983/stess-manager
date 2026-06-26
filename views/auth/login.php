@@ -7,7 +7,7 @@
                 <i class="fas fa-heart-pulse"></i>
             </div>
             <h1>Connexion</h1>
-            <p>Reconnectez-vous a votre espace de bien-etre.</p>
+            <p>Reconnectez-vous à votre espace de bien-être.</p>
         </div>
 
         <?= displayFlash(); ?>
@@ -35,11 +35,7 @@
             <p>Pas encore de compte ? <a href="<?= url('/register') ?>">Inscription</a></p>
         </div>
 
-        <div class="demo-box">
-            <h3>Compte administrateur</h3>
-            <p><strong>Email :</strong> admin@stressmanager.fr</p>
-            <p><strong>Mot de passe :</strong> Admin123!</p>
-        </div>
+
     </div>
 </div>
 
