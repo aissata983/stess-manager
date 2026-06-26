@@ -7,15 +7,15 @@
     <main class="main-content">
         <section class="page-header">
             <h1>Conseils anti-stress</h1>
-            <p>Explorez une bibliotheque de ressources pour mieux gerer votre stress.</p>
+            <p>Explorez une bibliothèque de ressources pour mieux gérer votre stress.</p>
         </section>
 
         <div class="card mb-24">
             <form method="GET" action="<?= url('/conseils') ?>" class="filter-form">
                 <div class="form-group">
-                    <label for="categorie">Filtrer par categorie</label>
+                    <label for="categorie">Filtrer par catégorie</label>
                     <select name="categorie" id="categorie" onchange="this.form.submit()">
-                        <option value="">Toutes les categories</option>
+                        <option value="">Toutes les catégories</option>
                         <?php foreach ($categories as $category): ?>
                             <option value="<?= e($category['categorie']) ?>" <?= $selectedCategory === $category['categorie'] ? 'selected' : '' ?>>
                                 <?= e(getCategoryLabel($category['categorie'])) ?>
