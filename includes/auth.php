@@ -49,7 +49,7 @@ function logoutUser(): void
 function requireLogin(): void
 {
     if (!isLoggedIn()) {
-        setFlash('warning', 'Vous devez etre connecte pour acceder a cette page.');
+        setFlash('warning', 'Vous devez être connecté pour acceder à cette page.');
         redirect('/login');
     }
 }
@@ -59,7 +59,7 @@ function requireAdmin(): void
     requireLogin();
 
     if (!isAdmin()) {
-        setFlash('error', 'Acces refuse. Cette page est reservee aux administrateurs.');
+        setFlash('error', 'Accès refuse. Cette page est réservée aux administrateurs.');
         redirect('/dashboard');
     }
 }
