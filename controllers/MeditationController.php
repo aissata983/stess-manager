@@ -76,11 +76,11 @@ class MeditationController
         );
 
         if (!$saved) {
-            setFlash('error', 'Impossible d\'enregistrer cette meditation.');
+            setFlash('error', 'Impossible d\'enregistrer cette méditation.');
             redirect('/meditation/' . $meditation['slug']);
         }
 
-        setFlash('success', 'Meditation enregistree avec succes.');
+        setFlash('success', 'Méditation enregistrée avec succès.');
         redirect('/meditation');
     }
 }
