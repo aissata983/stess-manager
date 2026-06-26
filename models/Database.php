@@ -13,10 +13,10 @@ class Database
                 self::$instance = new PDO($dsn, DB_USER, DB_PASS, DB_OPTIONS);
             } catch (PDOException $e) {
                 if (DEBUG_MODE) {
-                    die('Erreur de connexion a la base de donnees : ' . $e->getMessage());
+                    die('Erreur de connexion à la base de données : ' . $e->getMessage());
                 }
 
-                die('Une erreur est survenue lors de la connexion a la base de donnees.');
+                die('Une erreur est survenue lors de la connexion à la base de données.');
             }
         }
 
