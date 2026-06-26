@@ -80,7 +80,7 @@ class ExerciceController
             redirect('/exercices/' . $exercice['slug']);
         }
 
-        setFlash('success', 'Exercice enregistre avec succes.');
+        setFlash('success', 'Exercice enregistré avec succès.');
         redirect('/exercices');
     }
 }
